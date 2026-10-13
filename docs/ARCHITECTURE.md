@@ -1,6 +1,6 @@
 # Architecture and security
 
-Version 0.2.0 · reviewed October 13, 2026
+Version 0.2.1 · reviewed October 13, 2026
 
 ## Why a static app
 
@@ -40,7 +40,7 @@ The hosting platform controls publication/access; GitHub controls source and sch
 
 ## Trust boundaries and residual risks
 
-Appearance is the only browser-local persisted setting: a validated light/dark choice and six-digit hex accent. No search data is saved. Local-storage failures are caught so privacy settings do not break startup. Chosen accents are adjusted to 4.5:1 against defined main surfaces; black/white filled-button text is selected by calculated contrast. This is not certification of all page elements or assistive-technology behavior.
+Appearance is the only browser-local persisted setting: a validated light/dark choice and six-digit hex accent. No search data is saved. Local-storage failures are caught so privacy settings do not break startup. The in-app panel uses native range controls, bounded HSL conversion and hex validation; no user string is inserted as CSS or HTML. Paints are batched by animation frame and storage is written only on commit. Active slider values are not reset during input. Contrast correction uses a bounded binary search; chosen accents are adjusted to 4.5:1 against defined main surfaces, with black/white filled-button text chosen by contrast. This is not certification of all page elements or assistive-technology behavior.
 
 The official XML release checksum detects incomplete/changed download bytes, not false statements in NIST metadata. Browser JSON is trusted through HTTPS and the owner's controlled GitHub publishing pipeline; it is not separately digitally signed. A compromised owner/upstream account can corrupt that chain of trust. A browser schema check does not establish that every title is factually correct.
 

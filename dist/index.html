@@ -10,7 +10,20 @@
 </head>
 <body>
   <a class="skip" href="#main">Skip to publications</a>
-  <header class="topbar"><a class="brand" href="./" aria-label="NIST Navigator home"><span class="brand-icon" aria-hidden="true">N<span>↗</span></span><span>NIST Navigator<small>AN INDEPENDENT RESEARCH TOOL</small></span></a><nav aria-label="Main"><div class="appearance-controls"><button id="theme-toggle" class="quiet" aria-pressed="false">Dark high contrast</button><label for="accent-color">Accent <input id="accent-color" type="color" value="#006d67" aria-describedby="appearance-status"></label><span id="appearance-status" class="sr-only" role="status"></span></div><button id="refresh" class="quiet" disabled>↻ Refresh catalog</button><button id="share" class="quiet">Copy share link ↗</button><button id="about" class="quiet">About &amp; coverage</button><span class="free-badge">Free. No account needed.</span></nav></header>
+  <header class="topbar"><a class="brand" href="./" aria-label="NIST Navigator home"><span class="brand-icon" aria-hidden="true">N<span>↗</span></span><span>NIST Navigator<small>AN INDEPENDENT RESEARCH TOOL</small></span></a><nav aria-label="Main">
+    <div class="appearance-controls"><button id="theme-toggle" class="quiet" aria-pressed="false">Dark high contrast</button>
+      <div class="accent-control"><button id="accent-toggle" class="quiet" aria-expanded="false" aria-controls="accent-panel"><span class="accent-swatch" aria-hidden="true"></span>Accent</button>
+        <section id="accent-panel" class="accent-panel" aria-labelledby="accent-title" hidden>
+          <h2 id="accent-title">Make it your color.</h2><p>Changes preview instantly. Text stays readable.</p>
+          <div class="accent-presets" aria-label="Quick accent colors"><button type="button" data-accent="#006d67">Teal</button><button type="button" data-accent="#7c3aed">Violet</button><button type="button" data-accent="#e91e87">Rose</button><button type="button" data-accent="#e5a800">Gold</button><button type="button" data-accent="#2563eb">Cobalt</button></div>
+          <label for="accent-hue">Hue</label><input id="accent-hue" type="range" min="0" max="359" step="1" value="177">
+          <label for="accent-saturation">Saturation</label><input id="accent-saturation" type="range" min="0" max="100" step="1" value="100">
+          <label for="accent-lightness">Lightness</label><input id="accent-lightness" type="range" min="0" max="100" step="1" value="21">
+          <label for="accent-color">Hex color</label><input id="accent-color" type="text" value="#006D67" maxlength="7" pattern="#[0-9a-fA-F]{6}" autocomplete="off" spellcheck="false" aria-describedby="appearance-status">
+          <div id="accent-preview" class="accent-preview">Live preview</div><p id="appearance-status" role="status" aria-live="polite"></p><button id="accent-done" class="primary" type="button">Done</button>
+        </section>
+      </div>
+    </div><button id="refresh" class="quiet" disabled>↻ Refresh catalog</button><button id="share" class="quiet">Copy share link ↗</button><button id="about" class="quiet">About &amp; coverage</button><span class="free-badge">Free. No account needed.</span></nav></header>
   <div class="layout">
     <aside class="sidebar" aria-label="Subject area filters"><p class="eyebrow">THE KNOWLEDGE LIBRARY</p><h2>Explore by subject</h2><p class="sidebar-hint">Start broad. Find your focus.</p><div id="areas"><p>Loading subject areas…</p></div><div class="sidebar-foot"><span aria-hidden="true">↗</span><p><strong>Go straight to the source.</strong><br>Every publication links to NIST’s original record or DOI.</p></div></aside>
     <main id="main">

@@ -1,4 +1,4 @@
-# NIST Navigator 0.2.0
+# NIST Navigator 0.2.1
 
 An independent, free publication finder using open-source components. Search by partial words, small typos, common security abbreviations, publication number, subject, author, series and publication year. Suggestions appear below the search box and can be selected with a mouse or Up/Down/Enter. Escape closes suggestions. The subject areas include Data centers & infrastructure and subjects beyond cybersecurity.
 
@@ -104,7 +104,7 @@ References: https://github.com/usnistgov/NIST-Tech-Pubs ; https://www.nist.gov/n
 
 ## Documentation
 
-Version 0.2.0 adds **Dark high contrast** and a custom **Accent** color picker. Brightness is adjusted to maintain at least 4.5:1 text contrast against the defined main surfaces, and filled buttons use the more readable black/white text. The selected theme/color is stored only in browser-local storage; missing, corrupt or denied storage does not prevent startup. No search, personal information or shared account profile is persisted. The current sequential suite has **36 passing checks**, including update failure/recovery, worker replacement and 432 sampled color/theme combinations. This is not a claim of exhaustive accessibility/security verification.
+Version 0.2.1 repairs the **Accent** picker. Its in-app panel provides named presets, native keyboard/mouse Hue/Saturation/Lightness sliders, a validated six-digit hex field and a live applied-color preview. The platform color popup is no longer used. Updates are coalesced with requestAnimationFrame, active sliders are never rewritten by their input handlers, and browser storage is written only on commit/Done/theme changes—not on every drag movement. Both input and change paths are handled. Contrast correction uses a bounded binary search instead of coarse 1% jumps. Brightness is adjusted to maintain at least 4.5:1 text contrast against defined main surfaces; filled buttons use readable black/white text. The selected theme/color remains browser-local, with blocked/corrupt-storage fallback. No search, personal information or shared account profile is persisted. The current sequential suite has **39 passing checks**, including a 120-event/one-paint batching check and 432 sampled color/theme combinations. This is not exhaustive accessibility/security verification.
 
 - [User guide](docs/USER-GUIDE.md): plain-language walkthrough, GRC, search, filters, refresh and sharing.
 - [Operations and recovery](docs/OPERATIONS.md): monthly updates, manual runs, failure recovery, rollback and zero-cost limits.

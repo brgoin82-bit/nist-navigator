@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.2.1 — 2026-10-13
+
+- Replaced the platform color popup with an in-app accent panel: presets, Hue/Saturation/Lightness bars, validated hex entry and live applied-color preview.
+- Coalesced rapid changes into one paint per animation frame; removed active-slider rewrites and per-movement synchronous storage writes.
+- Added change-event handling and finer bounded contrast adjustment.
+- Preserved existing theme/color preferences, readable contrast, search, filters and monthly updates.
+- 39 sequential tests passed; actual rendered accent colors verified with mouse, keyboard, custom hex and reload.
+
 ## 0.2.0 — 2026-10-13
 
 - Added Refresh catalog with busy/success/failure feedback and preserved search/filter values.

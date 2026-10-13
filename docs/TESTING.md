@@ -1,6 +1,6 @@
 # Verification record
 
-Version 0.2.0 · October 13, 2026
+Version 0.2.1 · October 13, 2026
 
 ## Automated results
 
@@ -35,5 +35,13 @@ The first GitHub monthly-update workflow was manually dispatched through its int
 Local browser testing of the new channel showed `Monthly updates · Metadata search` and all 20,393 records, confirming the live public data path rather than the bundled fallback. Dark high contrast rendered successfully. Selecting `#ff33aa` through the color control, then reloading, preserved both dark mode and the chosen accent. The contrast-adjustment status was visible to the accessibility tree. This does not substitute for independent assistive-technology testing.
 
 ## Not established by these tests
+
+### 0.2.1 accent-picker repair
+
+The sequential suite passed **39/39 tests** in approximately 0.7 seconds on October 13, 2026. New checks cover known HSL conversions/bounds, 120 slider inputs coalesced to one paint with no storage writes until commit, preservation of the active slider, change-only hex events, and invalid input retaining the last valid accent. All existing 432 sampled color/theme combinations still meet the calculated main-surface/text contrast threshold.
+
+In the local browser, Violet visibly changed the rendered Search button to `rgb(172, 130, 244)` in dark mode. A mouse click on the Hue bar changed the displayed hue and rendered button color; keyboard Home/ArrowRight also changed it. Typing `#FF2200`, closing the panel and reloading preserved the selected color and dark theme, with applied button color `rgb(255, 102, 78)`. These are rendered-style checks, not just assertions that a preference value was saved. Continuous physical mouse-drag frame rate and every browser/OS combination have not been measured.
+
+## Remaining limitations
 
 No claim of complete security, formal accessibility compliance, legal compliance, every possible interaction, or continuous uptime. Automated/live tests do not prove coverage of all NIST material outside the source export, every possible spelling/synonym, every browser/device, prolonged load, full screen-reader operation, all network failures or future provider changes. Filesystem disk-full and power-loss tests were not performed. The initial tests were sequential; no deep scanner or multi-agent review was launched.

@@ -1,6 +1,6 @@
 # NIST Navigator: user guide
 
-Version 0.2.0 · October 13, 2026
+Version 0.2.1 · October 13, 2026
 
 ## What it does
 
@@ -49,7 +49,9 @@ If a refresh fails, the loaded catalog remains searchable. If initial loading ca
 
 ## Appearance
 
-Use **Dark high contrast** in the top bar to switch between the light and dark themes. Its pressed state means dark mode is on. The **Accent** color swatch opens your browser's color picker. Choose any color; the app adjusts its brightness if needed so accent text has at least 4.5:1 contrast against the defined main surfaces, and chooses black or white text for filled accent buttons. Very bright colors may be darker in light mode; very dark colors may be lighter in dark mode. This is intentional for readability.
+Use **Dark high contrast** in the top bar to switch themes. Its pressed state means dark mode is on. **Accent** opens the app's own color panel, not the browser's native popup. Choose a named preset, move the Hue/Saturation/Lightness bars, or type a six-digit hex color such as `#7C3AED`. Sliders also accept keyboard arrows/Home/End. The live preview shows the color actually applied to buttons, links and selected areas. Click Done, click outside the panel, or press Escape to close it; Escape/Done returns focus to Accent. Changes are saved after adjustment finishes.
+
+The app adjusts brightness if needed so accent text has at least 4.5:1 contrast against defined main surfaces, and selects black or white text for filled accent buttons. The panel explains when the applied color differs from your chosen color. Very bright colors may be darker in light mode; very dark colors may be lighter in dark mode. Invalid hex values are flagged and never replace the last valid accent.
 
 Theme and chosen color are saved only in your browser's local storage. Each classmate chooses independently. No account or server profile is created. If browser storage is blocked or corrupt, the app still opens with safe defaults. These controls do not change the catalog or filters. Full screen-reader testing has not been performed.
 
