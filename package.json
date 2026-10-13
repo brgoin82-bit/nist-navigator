@@ -1,0 +1,13 @@
+{
+  "name": "nist-navigator",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.13.0" },
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "sync": "node scripts/sync-catalog.mjs",
+    "test": "node --test --test-concurrency=1 tests/*.test.mjs"
+  },
+  "dependencies": { "sax": "1.6.1" }
+}

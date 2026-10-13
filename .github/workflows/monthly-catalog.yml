@@ -1,0 +1,42 @@
+name: Monthly NIST catalog update
+
+on:
+  schedule:
+    # The 10th each month, 14:17 UTC (09:17 CDT / 08:17 CST).
+    - cron: '17 14 10 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: nist-catalog-publication
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    permissions:
+      contents: write
+    steps:
+      - name: Check out the trusted default branch
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Set up Node
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '24.21.0'
+      - name: Install the locked parser without install scripts
+        run: npm ci --ignore-scripts --no-fund
+      - name: Verify and import the latest official NIST release
+        run: node scripts/sync-catalog.mjs --force
+      - name: Run the sequential tests
+        run: npm test
+      - name: Record the successful source check
+        run: node scripts/record-update.mjs
+      - name: Publish only verified public catalog data
+        run: node scripts/publish-catalog.mjs
+        env:
+          GITHUB_TOKEN: ${{ github.token }}

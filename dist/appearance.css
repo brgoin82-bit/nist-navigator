@@ -1,0 +1,26 @@
+:root{--surface:#ffffff;--sidebar:#f1f5f3;--soft:#edf5ef;--hover:#e4f4ed;--focus:#243d4a;--accent-ink:#ffffff}
+:root[data-theme=dark]{color-scheme:dark;--navy:#f4f8ff;--ink:#f4f8ff;--muted:#c0ccd9;--line:#718393;--paper:#080d14;--surface:#101a24;--sidebar:#14222e;--soft:#14222e;--mint:#21333f;--hover:#21333f;--focus:#f4f8ff}
+.topbar{height:auto;min-height:94px;padding-top:18px;padding-bottom:18px;flex-wrap:wrap;background:var(--surface)}
+.topbar nav{flex-wrap:wrap;justify-content:flex-end;gap:9px}
+.appearance-controls{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.appearance-controls label{display:flex;align-items:center;gap:7px;font-size:12px;color:var(--ink)}
+#accent-color{width:38px;height:34px;padding:2px;background:var(--surface);border:1px solid var(--line);border-radius:6px;cursor:pointer}
+#theme-toggle[aria-pressed=true]{border-color:var(--teal);color:var(--teal)}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline-color:var(--focus)}
+.skip,.quiet,.search-wrap,#suggestions,.filters select,.year-filter input,.publication,.loading,.empty,dialog{background:var(--surface);color:var(--ink)}
+.sidebar{background:var(--sidebar)}
+.quiet:hover,.area-button:hover,.examples button:hover{background:var(--hover)}
+.primary,.area-button[aria-pressed=true]{background:var(--teal);color:var(--accent-ink)}
+.primary:hover{background:var(--teal);filter:brightness(.94)}
+.area-button[aria-pressed=true] span:last-child{color:var(--accent-ink)}
+.catalog-status{background:var(--soft);border-color:var(--line)}
+#grc-guides>div{display:block}#grc-guides p{line-height:1.8;margin-bottom:0}
+.tag,.series-tag{background:var(--soft);color:var(--ink);border-color:var(--line)}
+.publication-bottom{border-color:var(--line)}
+.year-filter input{color:var(--ink)}
+:root[data-theme=dark] #search::placeholder{color:var(--muted)}
+:root[data-theme=dark] .free-badge{background:var(--soft);color:var(--ink);border-color:var(--line)}
+:root[data-theme=dark] .notice{background:#392c00;color:#fff1ae}
+:root[data-theme=dark] .error{background:#3d1319;color:#ffdce0}
+:root[data-theme=dark] #toast{background:#f4f8ff;color:#080d14}
+@media(max-width:700px){.topbar nav{justify-content:flex-start;column-gap:18px;row-gap:10px}.appearance-controls{width:100%;justify-content:space-between}.topbar .quiet{min-height:35px}.topbar{padding:17px 18px}}
