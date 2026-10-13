@@ -30,7 +30,9 @@ Actual browser testing of the published app observed:
 - `800-37` within GRC returned four records under the fuzzy search rules.
 - The live Refresh catalog button showed a busy state, then a success message; the query and GRC filter remained in place.
 
-The monthly-update channel and GitHub execution evidence are recorded in Actions after the first workflow run. The monthly calendar occurrence itself cannot be observed until its scheduled date. Creation of a workflow is not by itself a successful-run claim.
+The first GitHub monthly-update workflow was manually dispatched through its intended cloud path and **succeeded on October 13, 2026, 16:26:34–16:26:54 UTC**. All import, sequential tests, status recording and catalog publication steps passed. Published `update-status.json` was read back with checkedAt `2026-10-13T16:26:48.674Z`, release `Sept2026`, 20,393 records and the expected SHA-256. The workflow state was verified `active`; public repository/default branch verified as `brgoin82-bit/nist-navigator`, `main`. [Actual run evidence](https://github.com/brgoin82-bit/nist-navigator/actions/runs/38430513723). The monthly calendar occurrence itself cannot be observed until its scheduled date.
+
+Local browser testing of the new channel showed `Monthly updates · Metadata search` and all 20,393 records, confirming the live public data path rather than the bundled fallback. Dark high contrast rendered successfully. Selecting `#ff33aa` through the color control, then reloading, preserved both dark mode and the chosen accent. The contrast-adjustment status was visible to the accessibility tree. This does not substitute for independent assistive-technology testing.
 
 ## Not established by these tests
 
