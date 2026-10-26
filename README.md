@@ -1,4 +1,4 @@
-# NIST Navigator 0.2.1
+# NIST Navigator 0.2.2
 
 An independent, free publication finder using open-source components. Search by partial words, small typos, common security abbreviations, publication number, subject, author, series and publication year. Suggestions appear below the search box and can be selected with a mouse or Up/Down/Enter. Escape closes suggestions. The subject areas include Data centers & infrastructure and subjects beyond cybersecurity.
 
@@ -114,3 +114,12 @@ Version 0.2.1 repairs the **Accent** picker. Its in-app panel provides named pre
 - [Changelog](CHANGELOG.md): release history and scope.
 
 Current public source: https://github.com/brgoin82-bit/nist-navigator . App: https://nist-navigator.brgoin82.chatgpt.site . NIST source metadata and quoted document titles retain their original attribution. The independent application source is licensed under MIT; third-party NIST material is not relicensed by that license.
+
+
+## Documentation and versioning update — October 26, 2026
+
+Release **0.2.2** packages documentation and version metadata. Start with the [complete documentation index](docs/INDEX.md), [release notes](docs/RELEASE-NOTES.md) and [version policy](docs/VERSIONING.md). All existing guides remain available.
+
+The fresh sequential test run passed **39 tests** on Windows with Node.js 24.21.0. Application modules and catalog contents are unchanged. Earlier review dates and browser observations above remain historical; this update does not renew a security audit or publisher-edition review.
+
+Public repository: [brgoin82-bit/nist-navigator](https://github.com/brgoin82-bit/nist-navigator). The package's `private: true` prevents accidental npm publication; it does not make the GitHub repository private.

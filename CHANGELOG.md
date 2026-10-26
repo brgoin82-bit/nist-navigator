@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.2 — 2026-10-26
+
+- Added documentation index, version/release policy, contribution instructions and security reporting guidance.
+- Preserved all existing guides and the separately dated compliance register.
+- Verified 39 passing sequential tests; application code and catalog remain unchanged.
+- Advanced package metadata for this documentation patch; see [release notes](docs/RELEASE-NOTES.md).
+
 ## 0.2.1 — 2026-10-13
 
 - Replaced the platform color popup with an in-app accent panel: presets, Hue/Saturation/Lightness bars, validated hex entry and live applied-color preview.

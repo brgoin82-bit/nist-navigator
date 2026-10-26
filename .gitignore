@@ -3,3 +3,8 @@ node_modules/
 .runtime/
 dist/catalog.previous.json
 dist/catalog.*.tmp
+
+.openai/
+.env
+.env.*
+!.env.example

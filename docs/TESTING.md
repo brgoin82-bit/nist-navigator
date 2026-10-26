@@ -45,3 +45,10 @@ In the local browser, Violet visibly changed the rendered Search button to `rgb(
 ## Remaining limitations
 
 No claim of complete security, formal accessibility compliance, legal compliance, every possible interaction, or continuous uptime. Automated/live tests do not prove coverage of all NIST material outside the source export, every possible spelling/synonym, every browser/device, prolonged load, full screen-reader operation, all network failures or future provider changes. Filesystem disk-full and power-loss tests were not performed. The initial tests were sequential; no deep scanner or multi-agent review was launched.
+
+
+## Documentation release 0.2.2 — October 26, 2026
+
+Fresh run on Windows PowerShell with Node.js 24.21.0: `node --test --test-concurrency=1 tests/*.test.mjs` — **39 passed, zero failed/cancelled/skipped**. The one pinned SAX dependency was installed using `npm ci --ignore-scripts --no-fund --no-audit`; no lifecycle scripts were run. No fresh vulnerability audit was performed.
+
+Application modules and catalog bytes match pre-update commit `d363004`. All local Markdown file links were checked. Local HTTP smoke checks verified the index, catalog, rejection of source-file access and rejection of POST. No new hosted or full browser/accessibility verification was performed. Historical observations above remain historical.
